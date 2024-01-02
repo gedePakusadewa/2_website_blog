@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "eafc5d3b-aa63-4303-96e8-6a4f22abcaf4",
+		"name": "2_webblog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31985802"
+	},
+	"item": [
+		{
+			"name": "GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/web_blog"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Should it?\",\r\n    \"content\": \"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\",\r\n    \"author\":\"Mkom\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/web_blog/"
+			},
+			"response": []
+		},
+		{
+			"name": "GET by uuid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/web_blog/5a3d14be-9c57-4864-8f95-7683fa215491"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE by uuid",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Mac the day kuy kuy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/web_blog/5a3d14be-9c57-4864-8f95-7683fa215491"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE by uuid",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/api/web_blog/5a3d14be-9c57-4864-8f95-7683fa215491"
+			},
+			"response": []
+		}
+	]
+}

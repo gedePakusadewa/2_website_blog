@@ -19,9 +19,14 @@ Add update and delete feature win all blog using kebab dot icon or similar with 
 backend API
 - create base project
   - check what field will be use in table and then create it 
-- create feature CREAT and READ
+- create feature CREAT and READ ALL
 
 isssue and solution:
 - https://stackoverflow.com/a/32124113
+----------------------------------------
+backend api
+- create READ per one, UPDATE and DELETE
 
+isssue and solution:
+- none
 
