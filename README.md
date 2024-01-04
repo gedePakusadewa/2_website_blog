@@ -29,4 +29,12 @@ backend api
 
 isssue and solution:
 - none
+---------------------------------------
+frontend
+ref -> https://reactjsexample.com/blogs-and-gallery-app-built-with-react-js/
+- create page using same color, same button posisiton, with name "webblog".
+  just make base page like main page with button that not display anything
+- create new article page with form with dummy button
 
+isssue and solution:
+- none
