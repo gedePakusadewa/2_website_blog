@@ -15,6 +15,9 @@ function Navbar() {
         <Link to="/newblog">
           <Button variant="primary">New Blog</Button>
         </Link>
+        <Link to="/blogs">
+          <Button variant="primary">Blogs</Button>
+        </Link>
       </nav>
     </div>
   )

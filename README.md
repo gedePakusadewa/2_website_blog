@@ -50,4 +50,19 @@ cobak ini
 isssue and solution:
 - https://stackoverflow.com/a/75760055
 - https://stackoverflow.com/a/75525995
-- 
+----------------------------------------
+frontend
+ref -> https://reactjsexample.com/blogs-and-gallery-app-built-with-react-js/
+- create read update. update button in read page (create new button for this).
+make read and update function work. for update, make modal whenever user click update
+- fix css. make it like the "ref"
+
+isssue and solution:
+- https://stackoverflow.com/a/47467641
+- https://stackoverflow.com/a/63641389
+----------------------------------------
+frontend
+ref -> https://reactjsexample.com/blogs-and-gallery-app-built-with-react-js/
+- create delete. put delete button just in right side of update button. when user click delete modal appear
+to confirm if user really want to delete the blog.
+- make header and footer avaible in all page.

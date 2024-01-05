@@ -44,3 +44,49 @@ input, textarea{
     border-radius: 5px;
     width: 100%;
 }
+
+.card-container{
+    background-color: #d8f9ed;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 15px 20px 0px 20px;
+    border-radius: 3px;
+}
+
+.card-title{
+    color: #f1356d !important;
+    font-size: 25px;
+    font-weight: 509;
+    text-transform: uppercase;
+}
+
+.card-content{
+    color: #a4b0b9;
+}
+
+.card-time{
+    color: #a4b0b9;
+}
+
+.card-author-container{
+    border: 2px solid #f1356d;
+    text-align: center;
+    padding: 5px;
+    width: 65px;
+    border-radius: 5px;
+}
+
+.card-btn-edit{
+    border-radius: 5px !important;
+    
+}
+
+.blog-container{
+    margin: 0 20%;
+}
+
+.blog-title{
+    font-size: 18px;
+    font-weight: 509;
+}
