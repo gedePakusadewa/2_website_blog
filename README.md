@@ -38,3 +38,16 @@ ref -> https://reactjsexample.com/blogs-and-gallery-app-built-with-react-js/
 
 isssue and solution:
 - none
+----------------------------------------
+frontend
+ref -> https://reactjsexample.com/blogs-and-gallery-app-built-with-react-js/
+- create route page in react page from main to create new blog and vice versa
+- create a function to submit job
+
+cobak ini 
+-> https://www.freecodecamp.org/news/react-router-tutorial/
+
+isssue and solution:
+- https://stackoverflow.com/a/75760055
+- https://stackoverflow.com/a/75525995
+- 
