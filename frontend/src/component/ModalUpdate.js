@@ -1,8 +1,10 @@
+import { useState } from "react"
 import Modal from 'react-bootstrap/Modal';
-import { useEffect, useState } from "react"
 import Button from 'react-bootstrap/Button';
 import FormBlog from '../component/FormBlog.js';
 import axios from 'axios';
+import GeneralConst from "../resource/General.js"
+import BlogConst from "../resource/Blog.js"
 
 const ModalUpdate = ({
     setIsShowEditModal = () => {},
@@ -39,7 +41,7 @@ const ModalUpdate = ({
     <>
       <Modal show={isShow} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Update Blog</Modal.Title>
+          <Modal.Title>{BlogConst.UPDATE_BLOG}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <FormBlog
@@ -56,7 +58,7 @@ const ModalUpdate = ({
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            {GeneralConst.CLOSE}
           </Button>
         </Modal.Footer>
       </Modal>

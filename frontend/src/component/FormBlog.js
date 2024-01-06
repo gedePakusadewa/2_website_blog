@@ -1,5 +1,6 @@
+import { useState } from "react";
 import Button from 'react-bootstrap/Button';
-import { useState } from "react"
+import BlogConst from "../resource/Blog.js";
 
 const FormBlog = ({
     isCreate,
@@ -12,11 +13,6 @@ const FormBlog = ({
     content="",
     author=""
   }) => {
-    const addNewText = "Add a new blog";
-    const addNewSubmitText = "Add Blog";
-    const updateNewText = "Change blog";
-    const updateNewSubmitText = "Update";
-
     const [titleForm, setTitleForm] = useState(title);
     const [contentForm, setContentForm] = useState(content);
     const [authorForm, setAuthorForm] = useState(author);
@@ -37,9 +33,9 @@ const FormBlog = ({
       <div 
         className="newBlog-title"
       >
-        {isCreate ? addNewText : updateNewText}
+        {isCreate ? BlogConst.ADD_NEW : BlogConst.UPDATE_NEW}
       </div>
-      <label htmlFor="title">Title:</label><br />
+      <label htmlFor="title">{BlogConst.INPUT_TITLE}</label><br />
       <input 
         type="text"
         value={titleForm}
@@ -50,7 +46,7 @@ const FormBlog = ({
           }
         }
       /><br />
-      <label htmlFor="content">Content:</label><br />
+      <label htmlFor="content">{BlogConst.INPUT_CONTENT}</label><br />
       <textarea
         value={contentForm}
         onChange={
@@ -60,7 +56,7 @@ const FormBlog = ({
           }
         }
       ></textarea><br />
-      <label htmlFor="author">Author:</label><br />
+      <label htmlFor="author">{BlogConst.INPUT_AUTHOR}</label><br />
       <input
         type="text"
         value={authorForm}
@@ -76,7 +72,9 @@ const FormBlog = ({
           className="btn-add"
           onClick={()=>{submit()}}
         >
-          {isCreate ? addNewSubmitText : updateNewSubmitText}
+          {isCreate ?
+            BlogConst.ADD_NEW_BUTTON :
+            BlogConst.UPDATE_NEW_BUTTON}
         </Button>
       </div>
     </div>

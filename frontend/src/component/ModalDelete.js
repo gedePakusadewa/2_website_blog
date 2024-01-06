@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react"
+import { useState } from "react";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import GeneralConst from "../resource/General.js";
 
 const ModalDelete = ({
-  setIsShowDeleteModal = () => {},
-  setIsRefresh = () => {},
-  titleData,
-  idData
+    setIsShowDeleteModal = () => {},
+    setIsRefresh = () => {},
+    titleData,
+    idData
   }) => {
   const [isShow, setIsShow] = useState(true);
 
@@ -28,17 +29,20 @@ const ModalDelete = ({
     <>
       <Modal show={isShow} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Confirmation</Modal.Title>
+          <Modal.Title>{GeneralConst.CONFIRMATION_MODAL}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>Are you sure delete this Blogs "{titleData.toUpperCase()}"?</p>
+          <p>
+            {GeneralConst.ARE_YOU_SURE_MODAL.
+                replace("XXX", titleData.toUpperCase())}
+          </p>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="danger" onClick={deleteBlog}>
-            Yes
+            {GeneralConst.YES}
           </Button>
           <Button variant="primary" onClick={handleClose}>
-            Close
+            {GeneralConst.CLOSE}
           </Button>
         </Modal.Footer>
       </Modal>

@@ -3,7 +3,7 @@ import { useState } from "react"
 import Button from 'react-bootstrap/Button';
 import ModalUpdate from "../component/ModalUpdate.js"
 import ModalDelete from "../component/ModalDelete.js"
-
+import GeneralConst from "../resource/General.js"
 
 const Card = ({
     data,
@@ -51,7 +51,7 @@ const Card = ({
             size="sm"
           >
             <FontAwesomeIcon icon="fa-solid fa-file-pen" />{" "}
-            Edit
+            {GeneralConst.EDIT_BUTTON}
           </Button>{" "}
           <Button 
             className='card-btn-edit'
@@ -60,7 +60,7 @@ const Card = ({
             size="sm"
           >
             <FontAwesomeIcon icon="fa-solid fa-trash" />{" "}
-            Delete
+            {GeneralConst.DELETE_BUTTON}
           </Button>
         </p>
       </div>

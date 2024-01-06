@@ -1,11 +1,12 @@
 import '../style.css';
+import BlogConst from "../resource/Blog.js"
 
 export default function Main(){
   return(
     <>
       <footer>
-        <h1>WebBlog</h1>
-        © 2013 - 2024 www.web-blog.com - All Rights Reserved.
+        <h1>{BlogConst.TITLE}</h1>
+        {BlogConst.FOOTER_COPYRIGHT}
       </footer>
     </>
   )

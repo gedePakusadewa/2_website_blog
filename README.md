@@ -76,3 +76,7 @@ backend
 frontend
 - add resource
 
+issue and solution:
+- https://stackoverflow.com/a/72531447
+
+
