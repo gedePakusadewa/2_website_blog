@@ -2,9 +2,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from "react"
 import Button from 'react-bootstrap/Button';
 import ModalUpdate from "../component/ModalUpdate.js"
+import ModalDelete from "../component/ModalDelete.js"
 
-const Card = (data) => {
+
+const Card = ({
+    data,
+    setIsRefresh = () => {}
+  }) => {
   const [isShowEditModal, setIsShowEditModal] = useState(false)
+  const [isShowDeleteModal, setIsShowDeleteModal] = useState(false)
 
   const authorCard = (name) => {
     return(
@@ -30,17 +36,13 @@ const Card = (data) => {
     return d.toDateString() + " , " + d.getHours() + ":" + d.getMinutes();
   }
 
-  const showEditModal = () =>{
-    setIsShowEditModal(true)
-  }
-
   return(
     <div className="card-container">
       <div>
-        <p className="card-title">{data.data.title}</p>
-        <p className="card-content">{ displayText(data.data.content) }</p>
+        <p className="card-title">{data.title}</p>
+        <p className="card-content">{ displayText(data.content) }</p>
         <p className="card-time">
-          { displayDate(data.data.updatedAt) }
+          { displayDate(data.updatedAt) }
           <br />
           <Button 
             className='card-btn-edit'
@@ -50,19 +52,38 @@ const Card = (data) => {
           >
             <FontAwesomeIcon icon="fa-solid fa-file-pen" />{" "}
             Edit
+          </Button>{" "}
+          <Button 
+            className='card-btn-edit'
+            onClick={() => { setIsShowDeleteModal(true) }}
+            variant="danger"
+            size="sm"
+          >
+            <FontAwesomeIcon icon="fa-solid fa-trash" />{" "}
+            Delete
           </Button>
         </p>
       </div>
       <div>
-        <p>{authorCard(data.data.author)}</p>
+        <p>{authorCard(data.author)}</p>
       </div>
       {isShowEditModal && (
         <ModalUpdate 
           setIsShowEditModal={setIsShowEditModal}
-          titleData={data.data.title}
-          contentData={data.data.content}
-          authorData={data.data.author}
-          idData={data.data.id}
+          setIsRefresh={setIsRefresh}
+          titleData={data.title}
+          contentData={data.content}
+          authorData={data.author}
+          idData={data.id}
+        />
+      )}
+
+      {isShowDeleteModal && (
+        <ModalDelete
+          setIsShowDeleteModal={setIsShowDeleteModal}
+          setIsRefresh={setIsRefresh}
+          titleData={data.title}
+          idData={data.id}
         />
       )}
     </div>

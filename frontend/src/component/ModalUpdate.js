@@ -6,6 +6,7 @@ import axios from 'axios';
 
 const ModalUpdate = ({
     setIsShowEditModal = () => {},
+    setIsRefresh = () => {},
     titleData,
     contentData,
     authorData,
@@ -20,6 +21,7 @@ const ModalUpdate = ({
   const handleClose = () => {
     setIsShow(false)
     setIsShowEditModal(false)
+    setIsRefresh(true)
   };
 
   const submit = () =>{

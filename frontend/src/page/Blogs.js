@@ -4,13 +4,14 @@ import Card from "../component/Card.js"
 
 const Blog = () => {
   const [blogs, setBlogs] = useState(null)
+  const [isRefresh, setIsRefresh] = useState(false)
 
   useEffect(() => {
     axios.get(`http://127.0.0.1:8000/api/web_blog/`).
     then((res) => {
       setBlogs(res.data)
     })
-  },[]);
+  },[isRefresh]);
 
   if (!blogs){
     return(
@@ -24,7 +25,11 @@ const Blog = () => {
       <hr />
       {
         blogs.map(blog => {
-          return(<Card data={blog} />)
+          return(
+            <Card 
+              data={blog}
+              setIsRefresh={setIsRefresh}
+            />)
         })
       }
     </div>

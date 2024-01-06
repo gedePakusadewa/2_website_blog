@@ -66,3 +66,13 @@ ref -> https://reactjsexample.com/blogs-and-gallery-app-built-with-react-js/
 - create delete. put delete button just in right side of update button. when user click delete modal appear
 to confirm if user really want to delete the blog.
 - make header and footer avaible in all page.
+
+isssue and solution:
+- None
+----------------------------------------
+backend
+- check if implement django user auth/autho is applicable or not for this project
+
+frontend
+- add resource
+
