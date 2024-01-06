@@ -4,12 +4,8 @@ export default function Main(){
   return(
     <>
       <div>
-        body
+        No Content Here
       </div>
-      <footer>
-        <h1>WebBlog</h1>
-        © 2013 - 2024 www.web-blog.com - All Rights Reserved.
-      </footer>
     </>
   )
 }
