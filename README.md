@@ -71,7 +71,7 @@ isssue and solution:
 - None
 ----------------------------------------
 backend
-- check if implement django user auth/autho is applicable or not for this project
+- check if implement django user auth/autho is applicable or not for this project (PENDING)
 
 frontend
 - add resource
